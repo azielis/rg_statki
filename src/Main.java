@@ -30,22 +30,5 @@ public class Main {
             }
         }
 
-        //System.out.println("Laczna ilosc ruchow: "+iloscRuchow);
-
-        /*ProstyPortal prostyPortal = new ProstyPortal();
-        int[] polozenia = {2, 3, 4};
-        prostyPortal.setPolaPolozenia(polozenia);
-
-        String wybranePole = "2";
-
-        String wynik = prostyPortal.sprawdz(wybranePole);
-
-        String wynikTestu = "niepowodzenie";
-        if (wynik.equals("trafiony")) {
-            wynikTestu = "zakonczony pomyslnie";
-        }
-        System.out.println(wynikTestu);*/
-
-
     }
 }
