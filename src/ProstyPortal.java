@@ -1,8 +1,10 @@
+import java.util.ArrayList;
+
 public class ProstyPortal {
-    private int [] polaPolozenia;
+    private ArrayList<Integer> polaPolozenia;
     private int iloscTrafien;
 
-    public int[] getPolaPolozenia() {
+    public ArrayList<Integer> getPolaPolozenia() {
         return polaPolozenia;
     }
 
@@ -10,7 +12,7 @@ public class ProstyPortal {
         return iloscTrafien;
     }
 
-    void setPolaPolozenia(int[] polaPolozenia) {
+    void setPolaPolozenia(ArrayList<Integer> polaPolozenia) {
         this.polaPolozenia = polaPolozenia;
     }
 
@@ -22,14 +24,15 @@ public class ProstyPortal {
     String sprawdz (String stringPole){
         int strzal = Integer.parseInt(stringPole);
         String wynik = "pudlo";
-        for (int pole : polaPolozenia){
-            if (pole == strzal){
+        for (Integer pole : polaPolozenia){
+            if (pole.equals(strzal) ){
+                polaPolozenia.remove(pole);
                 wynik = "trafiony";
                 iloscTrafien++;
                 break;
             }
         }
-        if (iloscTrafien == polaPolozenia.length) {
+        if (polaPolozenia.isEmpty()) {
             wynik = "zatopiony";
         }
         return wynik;

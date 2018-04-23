@@ -1,22 +1,29 @@
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
-        //poprawic blad z podaniem tych samych liczb!! -  flaga true/false?!
+
         int iloscRuchow = 0;
         PomocnikGry pomocnik = new PomocnikGry();
         ProstyPortal prostyPortal = new ProstyPortal();
-        int[] polozenia = new int[3];
+        ArrayList <Integer> polozenia = new ArrayList<>();
         String wynik;
         String wybranePole;
         boolean czyIstnieje = true;
 
-        for (int i=0;i<polozenia.length;i++){
+        for (int i=0;i<3;i++){
             if (i==0){
-                polozenia[i] = (int)(Math.random()*5);
+                polozenia.add((int) (Math.random() * 5));
             } else {
-                polozenia[i] = polozenia[i-1]+1;
+                polozenia.add(polozenia.get(i - 1) + 1);
             }
         }
+
+        for (Integer pol: polozenia) {
+            System.out.println(pol);
+        }
+
         prostyPortal.setPolaPolozenia(polozenia);
         while (czyIstnieje){
 
