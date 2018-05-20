@@ -3,13 +3,13 @@ import java.util.ArrayList;
 public class Portal {
 
     private String nazwa;
-    private ArrayList<Integer> polaPolozenia;
+    private ArrayList<String> polaPolozenia;
 
     public void setNazwa(String nazwa) {
         this.nazwa = nazwa;
     }
 
-    void setPolaPolozenia(ArrayList<Integer> polaPolozenia) {
+    void setPolaPolozenia(ArrayList<String> polaPolozenia) {
         this.polaPolozenia = polaPolozenia;
     }
 
