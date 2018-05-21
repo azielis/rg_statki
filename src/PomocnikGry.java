@@ -10,6 +10,7 @@ class PomocnikGry {
     private int[] plansza = new int[wielkoscPlanszy];
     private int iloscPortali = 0;
 
+
     String pobierzDaneWejsciowe(String komunikat) {
         String daneWejsciowe = null;
         boolean poprawneDane = false;
